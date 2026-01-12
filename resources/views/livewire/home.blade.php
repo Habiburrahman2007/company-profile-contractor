@@ -8,7 +8,7 @@
         
         <div class="container mx-auto px-6 relative z-10 text-white">
             <div class="max-w-2xl animate-fade-in-up">
-                <span class="inline-block py-1 px-3 rounded bg-amber-500/20 border border-amber-500/30 text-amber-500 text-sm font-semibold mb-6 backdrop-blur-sm">
+                <span class="inline-block py-1 px-3 rounded bg-amber-950/60 border border-amber-500/30 text-amber-500 text-sm font-semibold mb-6 backdrop-blur-sm">
                     PREMIER CONSTRUCTION SERVICES
                 </span>
                 <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">

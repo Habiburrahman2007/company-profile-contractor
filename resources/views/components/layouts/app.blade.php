@@ -116,7 +116,7 @@
             </div>
 
             <!-- Mobile Menu Button (Simple implementation) -->
-            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl" area-label="Toggle navigation menu">
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
         </div>
@@ -177,7 +177,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+            <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
                 <p>&copy; {{ date('Y') }} BuildCorp Inc. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-amber-400">Privacy Policy</a>
