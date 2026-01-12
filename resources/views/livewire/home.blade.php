@@ -2,7 +2,7 @@
     <!-- Hero Section -->
     <div class="relative bg-zinc-900 h-[600px] flex items-center">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('img/home/hero.jpeg') }}" alt="BuildCorp Construction Site - Professional General Contracting Services" class="w-full h-full object-cover">
+            <img src="{{ asset('img/home/hero.jpeg') }}" alt="BuildCorp Construction Site - Professional General Contracting Services" class="w-full h-full object-cover" fetchpriority="high" loading="eager">
             <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent opacity-90"></div>
         </div>
         
