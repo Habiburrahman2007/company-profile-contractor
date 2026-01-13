@@ -38,8 +38,7 @@
             </div>
         </template>
 
-        <!-- Content (Bottom) -->
-        <div class="absolute bottom-0 left-0 w-full z-20 pb-36 pt-32">
+        <div class="absolute bottom-0 left-0 w-full z-20 pb-48 pt-32">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-xl tracking-tight">Our Services</h1>
                 <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md font-light">
