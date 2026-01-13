@@ -10,6 +10,21 @@ class Home extends Component
 {
     #[Title('Home - BuildCorp')]
     #[Layout('layouts.app')]
+
+    public $email = '';
+
+    public function subscribe()
+    {
+        $this->validate([
+            'email' => 'required|email',
+        ]);
+
+        // Simulate subscription logic
+        session()->flash('success', 'Thank you for subscribing!');
+        
+        $this->reset('email');
+    }
+
     public function render()
     {
         return view('livewire.home')->layoutData([

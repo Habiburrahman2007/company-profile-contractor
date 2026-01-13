@@ -185,7 +185,7 @@
                     <div class="absolute inset-0 bg-slate-800">
                          <!-- Placeholder for service image -->
                          <div class="w-full h-full bg-slate-800 flex items-center justify-center text-slate-600">
-                            <img src="{{ asset('img/home/komerisal.jpeg') }}" alt="Modern Commercial Building Construction Project by BuildCorp" class="w-full h-full object-cover">
+                            <img src="{{ asset('img/home/Komerisal.jpeg') }}" alt="Modern Commercial Building Construction Project by BuildCorp" class="w-full h-full object-cover">
                          </div>
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-900/40 to-transparent"></div>
@@ -238,9 +238,22 @@
             <p class="text-slate-300 text-xl max-w-2xl mx-auto mb-10">
                 Contact us today for a free consultation and quote. Let's build something great together.
             </p>
-            <a href="#contact" class="inline-block px-10 py-5 bg-white text-zinc-900 rounded-full font-bold text-lg hover:bg-amber-400 hover:text-white transition-colors shadow-xl">
-                Get a Quote
-            </a>
+            <div class="max-w-md mx-auto">
+                @if (session()->has('success'))
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                        <span class="block sm:inline">{{ session('success') }}</span>
+                    </div>
+                @else
+                    <form wire:submit="subscribe" class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" wire:model="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-full text-zinc-900 border-none focus:ring-2 focus:ring-amber-400 shadow-xl" required>
+                        <button type="submit" class="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-white rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-amber-500/20 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span wire:loading.remove>Subscribe</span>
+                            <span wire:loading>Processing...</span>
+                        </button>
+                    </form>
+                    @error('email') <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span> @enderror
+                @endif
+            </div>
         </div>
     </section>
 </div>
