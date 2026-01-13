@@ -245,7 +245,7 @@
                     </div>
                 @else
                     <form wire:submit="subscribe" class="flex flex-col sm:flex-row gap-4">
-                        <input type="email" wire:model="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-full text-zinc-900 border-none focus:ring-2 focus:ring-amber-400 shadow-xl" required>
+                        <input type="email" wire:model="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-full bg-white text-zinc-900 placeholder-zinc-500 border-none focus:ring-2 focus:ring-amber-400 shadow-xl" required>
                         <button type="submit" class="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-white rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-amber-500/20 disabled:opacity-50 disabled:cursor-not-allowed">
                             <span wire:loading.remove>Subscribe</span>
                             <span wire:loading>Processing...</span>
