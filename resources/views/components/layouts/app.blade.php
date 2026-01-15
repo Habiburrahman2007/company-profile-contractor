@@ -122,7 +122,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden fixed top-[72px] left-0 w-full h-[50vh] bg-zinc-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl z-40 transition-all duration-300 origin-top">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-[72px] left-0 w-full h-[50vh] bg-zinc-900 border-b border-white/10 shadow-2xl z-40 transition-all duration-300 origin-top">
             <div class="flex flex-col space-y-4 px-6 py-8 h-full overflow-y-auto">
                 <a href="/" class="text-lg font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
                 <a href="/about" class="text-lg font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
