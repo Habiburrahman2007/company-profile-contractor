@@ -122,13 +122,13 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-3/4 h-full bg-zinc-900 shadow-2xl z-50 transition-all duration-300 transform translate-x-full">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-24 right-6 w-1/2 h-auto min-h-[50vh] bg-zinc-900 border border-white/10 shadow-2xl z-50 transition-all duration-300 transform rounded-2xl">
             <div class="flex flex-col space-y-6 px-8 py-24 h-full overflow-y-auto relative">
 
                 <a href="/" class="text-xl font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
                 <a href="/about" class="text-xl font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
                 <a href="/services" class="text-xl font-medium transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Services</a>
-                <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-full font-medium transition-all text-center shadow-md mt-6 mb-4">
+                <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-full font-medium transition-all text-center shadow-md mt-6 mb-3">
                     Contact Me
                 </a>
             </div>
@@ -197,24 +197,20 @@
 
         // Toggle Mobile Menu
         mobileMenuBtn.addEventListener('click', () => {
-            if (mobileMenu.classList.contains('translate-x-full')) {
-                mobileMenu.classList.remove('translate-x-full');
-            } else {
-                mobileMenu.classList.add('translate-x-full');
-            }
+            mobileMenu.classList.toggle('hidden');
         });
         
         // Close Button
         if (closeMenuBtn) {
             closeMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.classList.add('hidden');
             });
         }
 
         // Close menu when clicking content
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.classList.add('hidden');
             }
         });
 
