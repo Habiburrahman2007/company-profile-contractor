@@ -122,12 +122,8 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden fixed top-24 right-4 w-1/2 h-auto min-h-[50vh] bg-zinc-900 border border-white/10 shadow-2xl z-50 transition-all duration-300 transform rounded-2xl">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-24 right-6 w-1/2 h-auto min-h-[50vh] bg-zinc-900 border border-white/10 shadow-2xl z-50 transition-all duration-300 transform rounded-2xl">
             <div class="flex flex-col space-y-6 px-8 py-24 h-full overflow-y-auto relative">
-                <!-- Close Button -->
-                <button id="close-menu-btn" class="absolute top-6 right-6 text-slate-400 hover:text-white text-2xl transition-colors">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
 
                 <a href="/" class="text-xl font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
                 <a href="/about" class="text-xl font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
