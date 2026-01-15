@@ -129,7 +129,7 @@
                 <a href="/about" class="text-xl font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
                 <a href="/services" class="text-xl font-medium transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Services</a>
                 <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-full font-medium transition-all text-center shadow-md mt-6">
-                    Contact Us
+                    Contact Me
                 </a>
             </div>
         </div>
