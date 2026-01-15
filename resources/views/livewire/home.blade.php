@@ -7,7 +7,7 @@
         </div>
         
         <div class="h-24 md:h-32"></div>
-        <div class="container mx-auto px-6 relative z-10 text-white pt-48 md:pt-40 mt-40">
+        <div class="container mx-auto px-6 relative z-10 text-white pt-72 md:pt-48">
             <div class="max-w-2xl animate-fade-in-up">
                 <span class="inline-block py-1 px-3 rounded bg-amber-950/60 border border-amber-500/30 text-amber-500 text-sm font-semibold mb-6 backdrop-blur-sm">
                     PREMIER CONSTRUCTION SERVICES
