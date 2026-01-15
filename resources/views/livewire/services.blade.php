@@ -38,24 +38,16 @@
             </div>
         </template>
 
-        <div class="absolute bottom-0 left-0 w-full z-20 pb-48 pt-32">
+        <!-- Centered Content -->
+        <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-xl tracking-tight">Our Services</h1>
                 <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md font-light">
                     Comprehensive construction solutions tailored to your needs.
                 </p>
-                
-                <!-- Slide Indicators -->
-                <div class="flex justify-center gap-3 mt-6">
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <button @click="active = index; clearInterval(timer); timer = setInterval(() => { active = (active + 1) % slides.length; }, 5000);" 
-                                class="h-1 rounded-full transition-all duration-300"
-                                :class="active === index ? 'w-8 bg-amber-500' : 'w-2 bg-white/50 hover:bg-white'">
-                        </button>
-                    </template>
-                </div>
             </div>
         </div>
+
     </div>
 
     <section class="py-20 bg-white">

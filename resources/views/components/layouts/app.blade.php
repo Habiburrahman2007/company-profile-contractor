@@ -122,12 +122,12 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 absolute top-full left-0 w-full shadow-xl">
-            <div class="flex flex-col space-y-4 px-6 py-6">
-                <a href="/" class="text-white hover:text-amber-500 transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : '' }}">Home</a>
-                <a href="/about" class="text-white hover:text-amber-500 transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : '' }}">About</a>
-                <a href="/services" class="text-white hover:text-amber-500 transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : '' }}">Services</a>
-                <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-2 rounded-full font-medium transition-all text-center shadow-md">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-[72px] left-0 w-full h-[50vh] bg-zinc-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl z-40 transition-all duration-300 origin-top">
+            <div class="flex flex-col space-y-4 px-6 py-8 h-full overflow-y-auto">
+                <a href="/" class="text-lg font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
+                <a href="/about" class="text-lg font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
+                <a href="/services" class="text-lg font-medium transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Services</a>
+                <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-3 rounded-full font-medium transition-all text-center shadow-md mt-4">
                     Contact Us
                 </a>
             </div>
