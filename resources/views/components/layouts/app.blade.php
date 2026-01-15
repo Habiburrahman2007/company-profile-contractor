@@ -122,7 +122,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden fixed top-0 right-0 w-1/2 h-screen bg-zinc-900 border-l border-white/10 shadow-2xl z-50 transition-all duration-300 transform translate-x-0">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-24 right-4 w-1/2 h-auto min-h-[50vh] bg-zinc-900 border border-white/10 shadow-2xl z-50 transition-all duration-300 transform rounded-2xl">
             <div class="flex flex-col space-y-6 px-8 py-24 h-full overflow-y-auto relative">
                 <!-- Close Button -->
                 <button id="close-menu-btn" class="absolute top-6 right-6 text-slate-400 hover:text-white text-2xl transition-colors">
