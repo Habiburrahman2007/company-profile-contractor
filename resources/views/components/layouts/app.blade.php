@@ -128,11 +128,6 @@
         
         <!-- Menu Content -->
         <div class="absolute right-0 top-0 w-3/4 max-w-sm h-full bg-zinc-900 border-l border-white/10 shadow-2xl flex flex-col p-8 pt-24 space-y-8">
-            <!-- Close Button -->
-            <button id="close-menu-btn" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-500 transition-colors" aria-label="Close menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
             <a href="/" class="text-2xl font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
             <a href="/about" class="text-2xl font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
             <a href="/services" class="text-2xl font-medium transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Services</a>
@@ -203,20 +198,12 @@
         const navLogo = document.getElementById('nav-logo');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
 
         // Toggle Mobile Menu
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
         
-        // Close Button
-        if (closeMenuBtn) {
-            closeMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
-
         // Close menu when clicking content
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
