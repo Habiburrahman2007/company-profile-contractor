@@ -119,21 +119,31 @@
             <button id="mobile-menu-btn" class="md:hidden text-white text-2xl" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
-        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 transition-all duration-300 transform">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        
+        <!-- Menu Content -->
+        <div class="absolute right-0 top-0 w-3/4 max-w-sm h-full bg-zinc-900 border-l border-white/10 shadow-2xl flex flex-col p-8 pt-24 space-y-8">
+            <!-- Close Button -->
+            <button id="close-menu-btn" class="absolute top-8 right-8 text-white text-3xl hover:text-amber-500 transition-colors" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden fixed top-24 right-6 w-1/2 h-auto min-h-[50vh] bg-zinc-900 border border-white/10 shadow-2xl z-50 transition-all duration-300 transform rounded-2xl">
-            <div class="flex flex-col space-y-6 px-8 py-24 h-full overflow-y-auto relative">
-
-                <a href="/" class="text-xl font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
-                <a href="/about" class="text-xl font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
-                <a href="/services" class="text-xl font-medium transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Services</a>
-                <a href="#contact" class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-3 rounded-full font-medium transition-all text-center shadow-md mt-6 mb-3">
-                    Contact Me
+            <a href="/" class="text-2xl font-medium transition-colors {{ request()->is('/') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Home</a>
+            <a href="/about" class="text-2xl font-medium transition-colors {{ request()->is('about') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">About</a>
+            <a href="/services" class="text-2xl font-medium transition-colors {{ request()->is('services') ? 'text-amber-500 font-bold' : 'text-white hover:text-amber-500' }}">Services</a>
+            
+            <div class="pt-8 mt-auto border-t border-white/10">
+                <a href="#contact" class="block w-full bg-amber-600 hover:bg-amber-500 text-white px-6 py-4 rounded-xl font-bold transition-all text-center shadow-lg">
+                    Contact Us
                 </a>
             </div>
         </div>
-    </nav>
+    </div>
 
     <!-- Main Content -->
     <main class="flex-grow">
